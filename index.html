@@ -1,0 +1,174 @@
+<!-- DOCTYPE declaration and opening the HTML document -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Setting the character encoding and viewport -->
+
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to the favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Setting the title of the page -->
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Importing Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="grid min-h-screen place-content-center bg-blue-very-dark font-overpass text-sm font-normal text-gray-light md:text-base"
+  >
+    <main>
+      <article
+        id="ratingContainer"
+        class="mx-6 flex w-[327px] flex-col justify-start gap-1 rounded-sm bg-blue-dark p-6 pb-8 sm:w-[412px] sm:pl-8 sm:pr-[39px]"
+      >
+        <!-- Star icon -->
+        <figure
+          class="grid h-[40px] w-[40px] place-content-center rounded-full bg-white-Light sm:h-[48px] sm:w-[48px]"
+        >
+          <img
+            class="h-[13.33px] w-[13.96px] sm:h-[16px] sm:w-[16.75px]"
+            src="./images/icon-star.svg"
+            alt="An image of a yellow star icon"
+          />
+        </figure>
+
+        <!-- Heading -->
+        <header>
+          <h1
+            class="py-4 text-lg text-white sm:pb-[15px] sm:pt-[30px] sm:text-xl sm:font-bold"
+          >
+            How did we do?
+          </h1>
+
+          <p class="sm:text-base">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </header>
+        <!-- Rating buttons container -->
+        <ul id="ratingButtonsContainer" class="flex py-[25px] sm:py-7">
+          <li>
+            <button
+              type="button"
+              class="ratingButtons grid h-[42px] w-[42px] place-content-center rounded-full bg-white-Light hover:bg-orange hover:text-white sm:h-[51px] sm:w-[51px] sm:text-base2"
+            >
+              1
+            </button>
+          </li>
+
+          <li>
+            <button
+              type="button"
+              class="ratingButtons ml-[17px] grid h-[42px] w-[42px] place-content-center rounded-full bg-white-Light hover:bg-orange hover:text-white sm:h-[51px] sm:w-[51px] sm:text-base2"
+            >
+              2
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="ratingButtons ml-[18px] grid h-[42px] w-[42px] place-content-center rounded-full bg-white-Light hover:bg-orange hover:text-white sm:h-[51px] sm:w-[51px] sm:text-base2"
+            >
+              3
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="ratingButtons ml-[18px] grid h-[42px] w-[42px] place-content-center rounded-full bg-white-Light hover:bg-orange hover:text-white sm:h-[51px] sm:w-[51px] sm:text-base2"
+            >
+              4
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="ratingButtons ml-[18px] grid h-[42px] w-[42px] place-content-center rounded-full bg-white-Light hover:bg-orange hover:text-white sm:h-[51px] sm:w-[51px] sm:text-base2"
+            >
+              5
+            </button>
+          </li>
+        </ul>
+
+        <!-- Submit button -->
+        <button
+          id="submitBtn"
+          type="button"
+          class="rounded-full bg-orange pb-[13px] pt-[14px] font-bold uppercase tracking-[1.86667px] text-white hover:bg-white hover:text-orange sm:py-[13px] sm:text-base sm:tracking-[2px]"
+        >
+          Submit
+        </button>
+      </article>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <article
+        id="thankyouContainer"
+        class="mx-6 hidden w-[327px] flex-col rounded-sm bg-blue-dark px-6 pb-[37px;] pt-[34px] text-center sm:w-[412px] sm:px-9 sm:py-[45px]"
+      >
+        <!-- Thank you illustration -->
+        <figure class="grid place-content-center">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="Thank you illustration"
+          />
+          <figcaption
+            id="selectedRating"
+            class="my-6 rounded-full bg-white-Light px-3 py-[5px] text-orange sm:my-8 sm:text-base"
+          ></figcaption>
+        </figure>
+        <!-- Thank you heading -->
+        <h1
+          class="pb-[10px] text-lg font-bold text-white sm:pb-[15px] sm:text-xl"
+        >
+          Thank you!
+        </h1>
+        <p class="sm:text-base">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+        <!-- Thank you state end -->
+      </article>
+    </main>
+
+    <!-- Footer with attribution -->
+    <footer
+      class="attribution fixed bottom-0 w-[100%] pb-4 text-center text-[11px]"
+    >
+      <p>
+        Challenge by
+        <a
+          rel="noopener"
+          href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI"
+          target="_blank"
+          class="text-orange hover:text-white"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          rel="noopener"
+          href="https://github.com/ucod3"
+          target="_blank"
+          class="text-orange hover:text-white"
+          >Usman Butt</a
+        >.
+      </p>
+    </footer>
+  </body>
+
+  <script type="module" src="./src/main.js"></script>
+</html>

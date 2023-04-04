@@ -1,0 +1,31 @@
+{
+  "name": "interactive-rating-component",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite build && vite preview"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "no-plusplus": 0
+    }
+  },
+  "devDependencies": {
+    "vite": "^4.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
+    "prettier-plugin-tailwindcss": "^0.2.5",
+    "tailwindcss": "^3.3.0"
+  },
+  "dependencies": {
+    "eslint-config-wesbos": "^3.2.3"
+  }
+}

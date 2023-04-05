@@ -32,6 +32,9 @@ module.exports = {
       lg: '30px',
       full: '9999px'
     },
+    future: {
+      hoverOnlyWhenSupported: true,
+    },
     extend: {}
   },
   plugins: []

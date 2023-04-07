@@ -8,4 +8,5 @@ export default function ratingButtonHandler(e) {
 
   // Call the toggleRatingButtonClasses function and pass the clicked button to it
   toggleRatingButtonClasses(clickedButton);
+
 }

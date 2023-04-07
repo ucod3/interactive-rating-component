@@ -5,10 +5,10 @@ import toggleHiddenClassAfterSubmit from './toggleHiddenClassAfterSubmit';
 import selectedRatingText from './selectedRatingText';
 
 // Define and export the default function called handleAfterSubmit
-export default function handleAfterSubmit(count) {
+export default function handleAfterSubmit(value) {
   // Call the toggleHiddenClassAfterSubmit function to toggle the hidden class after form submission
   toggleHiddenClassAfterSubmit();
 
-  // Call the selectedRatingText function and pass the count value to it
-  selectedRatingText(count);
+  // Call the selectedRatingText function and pass the  value to it
+  selectedRatingText(value);
 }

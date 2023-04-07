@@ -1,34 +1,28 @@
-// Import the toggleButtonClass function from the toggleButtonClass module
-import toggleButtonClass from './toggleButtonClass';
-
-// Import the updateSelectedCount function from the ratingCount module
-import { updateSelectedCount } from './ratingCount';
+// This file contains the function that toggles the classes for the rating buttons
+// It also imports the selectedRating function from the selectedRating.js file
+import selectedRating from './selectedRating';
 
 // Define and export the default function called toggleRatingButtonClasses
 export default function toggleRatingButtonClasses(element) {
-  // Get the classList of the given element
-  const ele = element.classList;
+  //Get all the rating buttons
+  const ratingButtons = document.querySelectorAll('.ratingButtons');
 
   // Define the class names for the rating buttons
-  const commonClassName = 'ratingButtons';
   const addBgClassName = 'bg-gray-medium';
-  const removeBgClassName = 'bg-white-Light';
+  const defaultBgClassName = 'bg-white-Light';
   const addTextColorClassName = 'text-white';
 
-  // Check if the given element contains the addBgClassName
-  const wasClassActive = ele.contains(addBgClassName);
+  // Iterate through all rating buttons, and update their classes accordingly. If a button is not the clicked button, reset it to the default state. If it is the clicked button, apply the active styling classes.
+  ratingButtons.forEach(button => {
+    const buttonClassList = button.classList;
+    if (button !== element) {
+      buttonClassList.remove(addBgClassName, addTextColorClassName);
+      buttonClassList.add(defaultBgClassName);
+    } else {
+      buttonClassList.add(addBgClassName, addTextColorClassName);
+      buttonClassList.remove(defaultBgClassName);
+    }
+  });
 
-  // If the given element contains the commonClassName
-  if (ele.contains(commonClassName)) {
-    // Call the toggleButtonClass function with the appropriate arguments
-    toggleButtonClass(
-      element,
-      commonClassName,
-      addBgClassName,
-      removeBgClassName,
-      addTextColorClassName
-    );
-    // Update the selected count based on whether the class was active or not
-    updateSelectedCount(!wasClassActive);
-  }
+  selectedRating(element.value);
 }

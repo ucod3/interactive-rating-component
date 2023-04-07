@@ -2,7 +2,7 @@
 
 ## Welcome! 👋
 
-This project is an implementation of the [Interactive Rating Component challenge by Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj).
+This project is an implementation of the [Interactive Rating Component challenge by Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI).
 
 A responsive, interactive rating component built with Vite, Tailwind CSS, and ES6 modules. Users can rate a product or service by selecting a rating from 1 to 5. The component displays the total rating count and a thank-you message after submission.
 
